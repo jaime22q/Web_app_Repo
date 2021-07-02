@@ -11,8 +11,13 @@ body{
   left: 50%;
   top: 50%;
 }
-h4{
+h4, h1{
   font-family: Marker Felt;
   font-size: 40px;
   color: #EFCC99;
+}
+li{
+  font-family: Marker Felt;
+  color: white;
+
 }

@@ -1,12 +1,13 @@
+<%- include ('./partials/header'); -%>
+
 <h1>Results Page</h1>
 
-<ul>
-  <% response["data"].items.forEach(item => { %>
-    <li><strong>
-      <%= item.volumeInfo["title"] %>
-      </strong>
-    </li>
+<% response["data"].items.forEach(item => { %>
+        <%= item.volumeInfo["title"] %>
+        <span> - </span>
+        <%= item.volumeInfo["authors"] %>
   <% }) %>
-</ul>
 
 <a href="/">Search Again!</a>
+
+<%- include ('./partials/footer'); -%>
