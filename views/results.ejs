@@ -1,13 +1,16 @@
 <%- include ('./partials/header'); -%>
 
-<h1>Results Page</h1>
-
+<div class="container2">
 <% response["data"].items.forEach(item => { %>
+      <div class="thumbnail">
+        <img src= <%=
+        item.volumeInfo.imageLinks === undefined ? "https://dubsism.files.wordpress.com/2017/12/image-not-found.png" : item.volumeInfo.imageLinks.thumbnail %> >
+        <div class="caption">
         <%= item.volumeInfo["title"] %>
         <span> - </span>
         <%= item.volumeInfo["authors"] %>
+          </div>
+        </div>
   <% }) %>
-
-<a href="/">Search Again!</a>
-
+</div>
 <%- include ('./partials/footer'); -%>

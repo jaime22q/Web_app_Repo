@@ -23,10 +23,18 @@ async function getBook(url, res){
   }
 }
 
+app.get("/register", function(req, res){
+  res.render("register");
+});
+
+
+
+
+
 //SET UP PORT
 port = process.env.PORT || 3000;
 
 //listen on port 3000
 app.listen(port, function(){
-  console.log("Server started server listening on port "+port);
+  console.log("Server started, server listening on port "+port);
 });

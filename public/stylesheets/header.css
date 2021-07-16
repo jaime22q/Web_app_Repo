@@ -1,23 +1,43 @@
-body{
-  background-color: #E9ECEF;
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwmblogs.wm.edu%2Fwp-content%2Fuploads%2F2016%2F04%2Fstack-of-books.png&f=1&nofb=1");
+body {
+	background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwmblogs.wm.edu%2Fwp-content%2Fuploads%2F2016%2F04%2Fstack-of-books.png&f=1&nofb=1");
 }
 
-.container{
-  height: 300px;
-  width: 300px;
-  position: absolute;
-  margin: -150px 0 0 -150px;
-  left: 50%;
-  top: 50%;
+.container {
+	height: 300px;
+	width: 300px;
+	position: relative;
+	margin-top: 10%;
 }
-h4, h1{
-  font-family: Marker Felt;
-  font-size: 40px;
-  color: #EFCC99;
+.container2{
+	display: grid;
+	grid-template-columns: repeat(3, minmax(150px, 1fr));
+	grid-template-rows: repeat(4, 250px);
+	gap: 2rem;
+	margin: 5%;
 }
-li{
-  font-family: Marker Felt;
-  color: white;
+.thumbnail{
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.caption{
+	font-family: Marker Felt;
+	color: white;
+	text-shadow: 2px 2px black;
+	text-align: center;
+}
+h4,
+h1 {
+	font-family: Marker Felt;
+	font-size: 40px;
+	color: #efcc99;
+}
 
+img{
+	height: 200px;
+	width: 200px;
+}
+nav{
+	background-color: #efcc99;
 }
