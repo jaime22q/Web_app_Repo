@@ -1,9 +1,9 @@
 This repo holds code for the web application book finder. 
 
-Book finder is a web application written in HTML, CSS, JS which make sure of the google books API to fetch the data queried by the user. 
+Book finder is a web application written in NodeJS which make use of the google books API to fetch the data queried by the user. 
 
-This web app consists of two pages. 
+This web application consists of a landing page, a sign up page, login page, results page and details page. 
 
-The landing page where the title of the web app and the search field are located 
-and a second page which renders after the search has been performed displaying the book, few details of the book and 
-the cover images of the book. 
+Currently under development.
+
+New features will be added to the application in future releases. 
