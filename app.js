@@ -6,6 +6,7 @@ const express = require('express'),
       session = require('express-session');
       passport = require('passport');
       passportLocal = require('passport-local');
+      ejsMate = require('ejs-mate');
       User = require('./models/user');
       userRoutes = require('./routes/users');
 
@@ -33,6 +34,7 @@ sessionConfig = {
   }
 }
 
+app.engine('ejs',ejsMate);
 app.use(session(sessionConfig));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -40,7 +42,7 @@ passport.use(new passportLocal(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-app.use('/', userRoutes);
+app.use(userRoutes);
 app.set("view engine", "ejs");
 app.use(indexRoute);
 app.use(express.static(__dirname + '/public'));
@@ -65,7 +67,6 @@ app.get('/response', async(req, res) => {
 app.get('/login', function(req, res){
   res.render("login");
 });
-
 
 
 //SET UP PORT

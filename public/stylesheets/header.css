@@ -33,6 +33,12 @@ h1 {
 	font-size: 40px;
 	color: #efcc99;
 }
+h2 {
+	font-family: Marker Felt;
+	font-size: 40px;
+	color: white;
+	text-align: center;
+}
 
 img {
 	height: 200px;
