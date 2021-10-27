@@ -1,14 +1,14 @@
-const express = require('express'),
-      app = express();
-      indexRoute = require('./routes/index');
-      axios = require('axios');
-      mongoose = require('mongoose');
-      session = require('express-session');
-      passport = require('passport');
-      passportLocal = require('passport-local');
-      ejsMate = require('ejs-mate');
-      User = require('./models/user');
-      userRoutes = require('./routes/users');
+const express = require('express');
+const app = express();
+const indexRoute = require('./routes/index');
+const axios = require('axios');
+const mongoose = require('mongoose');
+const session = require('express-session');
+const passport = require('passport');
+const passportLocal = require('passport-local');
+const ejsMate = require('ejs-mate');
+const User = require('./models/user');
+const userRoutes = require('./routes/users');
 
 mongoose.connect('mongodb://localhost:27017/book-finder', {
   useNewUrlParser: true,
@@ -67,6 +67,13 @@ app.get('/response', async(req, res) => {
 app.get('/login', function(req, res){
   res.render("login");
 });
+
+
+app.use((err, req ,res, next) => {
+  const{ statusCode = 500 } = err;
+  if(!err.message)  err.message = 'Oh no! Something went wrong!'
+  res.status(statusCode).render('error', { err })
+})
 
 
 //SET UP PORT

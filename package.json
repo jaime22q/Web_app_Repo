@@ -10,10 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.4",
+    "catch-async": "^1.0.1",
     "ejs": "^3.1.6",
     "ejs-mate": "^3.0.0",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
+    "flash": "^1.1.0",
+    "joi": "^17.4.2",
     "mongoose": "^5.13.3",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
